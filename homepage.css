@@ -1,13 +1,24 @@
-body {
-	font-family: Lucida Console;
-	background-color: rgb(185, 179, 175);
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
 }
-	h1 {
-		color: rgb(255, 255, 255);
-	}
-	h2 {
-		color: rgb(255, 255, 255);
-	}
-	h3 {
-		color: rgb(255, 255, 255);
-	}
+
+#welcome-message {
+    position: absolute;
+	z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+#welcome-message h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 0;
+}
