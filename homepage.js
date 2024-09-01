@@ -1,17 +1,14 @@
-// Setting up the scene, camera, and renderer
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer();
+const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('container').appendChild(renderer.domElement);
 
-// Creating a TorusKnot geometry to simulate a swirling black hole
 const geometry = new THREE.TorusKnotGeometry(10, 3, 100, 16);
 const material = new THREE.MeshBasicMaterial({ color: 0x000000, wireframe: true });
 const torusKnot = new THREE.Mesh(geometry, material);
 scene.add(torusKnot);
 
-// Creating a starfield effect
 const starsGeometry = new THREE.BufferGeometry();
 const starCount = 1000;
 const positions = new Float32Array(starCount * 3);
@@ -28,19 +25,17 @@ camera.position.z = 50;
 function animate() {
     requestAnimationFrame(animate);
 
-    // Animate the black hole (torus knot)
     torusKnot.rotation.x += 0.01;
     torusKnot.rotation.y += 0.01;
 
-    // Animate the stars moving towards the black hole
-    starsGeometry.attributes.position.array.forEach((v, idx) => {
-        if (idx % 3 === 2) {
-            starsGeometry.attributes.position.array[idx] += 0.05;
-            if (starsGeometry.attributes.position.array[idx] > 1000) {
-                starsGeometry.attributes.position.array[idx] = -1000;
-            }
+    // Animate stars moving towards the viewer
+    const positions = starsGeometry.attributes.position.array;
+    for (let i = 2; i < positions.length; i += 3) {
+        positions[i] += 0.05;
+        if (positions[i] > 1000) {
+            positions[i] = -1000;
         }
-    });
+    }
     starsGeometry.attributes.position.needsUpdate = true;
 
     renderer.render(scene, camera);
@@ -48,7 +43,6 @@ function animate() {
 
 animate();
 
-// Adjust the scene when the window is resized
 window.addEventListener('resize', () => {
     const width = window.innerWidth;
     const height = window.innerHeight;
@@ -56,3 +50,4 @@ window.addEventListener('resize', () => {
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
 });
+
