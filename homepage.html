@@ -3,15 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wormhole Welcome</title>
-    <link rel="stylesheet" href="homepage.css">
+    <title>Homepage</title>
+    <style>
+        body, html {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        #homepage-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-    <div id="welcome-message">
-        <h1>Welcome Traveler, to the wormhole</h1>
-    </div>
-    <div id="container"></div>
+    <audio id="background-music" src="radio_chatter_space.mp3" loop></audio>
+    <div id="homepage-text">Super Nova Coming Soon</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="homepage.js" defer></script>
+    <script src="homepage.js"></script>
 </body>
 </html>
