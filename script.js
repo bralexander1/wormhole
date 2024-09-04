@@ -109,5 +109,5 @@ window.addEventListener('beforeunload', () => {
 
 // Navigate to homepage on clicking the text
 document.getElementById('welcome-text').addEventListener('click', () => {
-    window.location.href = 'file:///Users/ben/Desktop/wormhole/homepage.html'; // Replace with your actual homepage URL
+    window.location.href = 'https://bralexander1.github.io/wormhole/homepage.html'; // Replace with your actual homepage URL
 });
