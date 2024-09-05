@@ -21,6 +21,26 @@
             text-align: center;
             color: white;
         }
+        #audio-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #444;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 3;
+            border-radius: 5px;
+        }
+
+        #audio-toggle:hover {
+            background-color: #666;
+        }
+
+        audio {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -28,5 +48,20 @@
     <div id="homepage-text">Super Nova Coming Soon</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="homepage.js"></script>
+    <script>
+        // Toggle audio functionality
+        const audio = document.getElementById('background-audio');
+        const toggleButton = document.getElementById('audio-toggle');
+
+        toggleButton.addEventListener('click', function() {
+            if (audio.paused) {
+                audio.play();
+                toggleButton.textContent = 'Turn Audio Off';
+            } else {
+                audio.pause();
+                toggleButton.textContent = 'Turn Audio On';
+            }
+        });
+    </script>
 </body>
 </html>
