@@ -5,28 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wormhole</title>
     <link rel="stylesheet" href="styles.css">
-    <script>
-         #audio-toggle {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #444;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 3;
-            border-radius: 5px;
-        }
-        #audio-toggle:hover {
-            background-color: #666;
-        }
-
-        audio {
-            display: none;
-        }
-    </script>
 </head>
+
 <body>
     <div id="container"></div>
     <div id="welcome-text">
@@ -38,20 +18,8 @@
 		<source src="radio_chatter_space.mp3" type="audio/mpeg">
 		Your browser does not support the audio element.
 	</audio>	
-    <script>
-        // Toggle audio functionality
-        const audio = document.getElementById('background-audio');
-        const toggleButton = document.getElementById('audio-toggle');
-
-        toggleButton.addEventListener('click', function() {
-            if (audio.paused) {
-                audio.play();
-                toggleButton.textContent = 'Turn Audio Off';
-            } else {
-                audio.pause();
-                toggleButton.textContent = 'Turn Audio On';
-            }
-        });
-    </script>
+    <button id="audio-toggle">Turn Audio Off</button>
+    <audio id="background-audio" src="wormhole/radio_chatter_space.mp3" autoplay loop></audio>
+    
 </body>
 </html>

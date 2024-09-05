@@ -4,64 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
-    <style>
-        body, html {
-            margin: 0;
-            overflow: hidden;
-            background-color: black;
-        }
-
-        #homepage-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 3rem;
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            color: white;
-        }
-        #audio-toggle {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: #444;
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 3;
-            border-radius: 5px;
-        }
-
-        #audio-toggle:hover {
-            background-color: #666;
-        }
-
-        audio {
-            display: none;
-        }
-    </style>
+    
 </head>
 <body>
     <audio id="background-music" src="radio_chatter_space.mp3" loop></audio>
     <div id="homepage-text">Super Nova Coming Soon</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="homepage.js"></script>
-    <script>
-        // Toggle audio functionality
-        const audio = document.getElementById('background-audio');
-        const toggleButton = document.getElementById('audio-toggle');
-
-        toggleButton.addEventListener('click', function() {
-            if (audio.paused) {
-                audio.play();
-                toggleButton.textContent = 'Turn Audio Off';
-            } else {
-                audio.pause();
-                toggleButton.textContent = 'Turn Audio On';
-            }
-        });
-    </script>
+    <button id="audio-toggle">Turn Audio Off</button>
+    <audio id="background-audio" src="wormhole/radio_chatter_space.mp3" autoplay loop></audio>
 </body>
 </html>
