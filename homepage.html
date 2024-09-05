@@ -3,17 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    
+    <title>Super Nova Coming Soon</title>
+    <link rel="stylesheet" href="wormhole/homepage.css">
 </head>
 <body>
-    <audio id="background-music" src="radio_chatter_space.mp3" loop></audio>
-    <div id="homepage-text">Super Nova Coming Soon</div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="homepage.js"></script>
+    <div id="container"></div>
+
+    <!-- LED-style text -->
+    <div id="super-nova">
+        <h1>Super Nova Coming Soon</h1>
+    </div>
+
+    <!-- Audio player -->
+    <audio id="background-audio" autoplay loop>
+        <source src="wormhole/radio_chatter_space.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Audio toggle button -->
     <button id="audio-toggle">
-        <img src="wormhole/speaker_on.png" alt="Speaker On" id="audio-icon">
+        <img id="audio-icon" src="wormhole/speaker_on.png" alt="Audio Toggle" />
     </button>
-    <audio id="background-audio" src="wormhole/radio_chatter_space.mp3" autoplay loop></audio>
+
+    <script src="wormhole/homepage.js"></script>
 </body>
 </html>

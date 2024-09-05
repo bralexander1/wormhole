@@ -4,23 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wormhole</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="wormhole/style.css">
 </head>
-
 <body>
-    <div id="container"></div>
+    <!-- Welcome Text -->
     <div id="welcome-text">
-        <h1><span>welcome traveler, to the /wormhole/</span></h1>
+        Welcome Traveler,<br>to the <span>/wormhole/</span>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="script.js" defer></script>
-	<audio id="background-music" loop autoplay>
-		<source src="radio_chatter_space.mp3" type="audio/mpeg">
-		Your browser does not support the audio element.
-	</audio>	
+
+    <!-- Audio Toggle Button -->
     <button id="audio-toggle">
         <img src="wormhole/speaker_on.png" alt="Speaker On" id="audio-icon">
     </button>
+
+    <!-- Audio Player -->
     <audio id="background-audio" src="wormhole/radio_chatter_space.mp3" autoplay loop></audio>
+
+    <!-- Wormhole Rendering -->
+    <script type="module" src="wormhole/index.js"></script>
+    <script src="wormhole/script.js"></script>
 </body>
 </html>
