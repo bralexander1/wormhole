@@ -18,41 +18,18 @@ body, html {
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: #444;
-    color: white;
-    border: none;
+    background-color: transparent;
+    border: circle;
+    border-color: #fff;
     padding: 10px;
     cursor: pointer;
     z-index: 3;
     border-radius: 5px;
 }
 
-#audio-toggle:hover {
-    background-color: #666;
-}
-
-audio {
-    display: none;
-}
-#audio-toggle {
-position: absolute;
-top: 20px;
-right: 20px;
-background-color: #444;
-color: white;
-border: none;
-padding: 10px;
-cursor: pointer;
-z-index: 3;
-border-radius: 5px;
-}
-
-#audio-toggle:hover {
-background-color: #666;
-}
-
-audio {
-display: none;
+#audio-toggle: img {
+    width: 30px;
+    height: 30px;
 }
 
 @keyframes colorChange {

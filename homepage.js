@@ -80,16 +80,18 @@ window.addEventListener('load', function() {
         colorIndex = (colorIndex + 1) % colors.length;
     }, 500);
 });
+
 // Toggle audio functionality
 const audio = document.getElementById('background-audio');
 const toggleButton = document.getElementById('audio-toggle');
+const audioIcon = document.getElementById('audio-icon');
 
 toggleButton.addEventListener('click', function() {
     if (audio.paused) {
         audio.play();
-        toggleButton.textContent = 'Turn Audio Off';
+        audioIcon.src = wormhole/speaker_on.png;
     } else {
         audio.pause();
-        toggleButton.textContent = 'Turn Audio On';
+        audioIcon.src = wormhole/speaker_off.png;
     }
 });

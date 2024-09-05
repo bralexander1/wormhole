@@ -111,6 +111,7 @@ window.addEventListener('beforeunload', () => {
 document.getElementById('welcome-text').addEventListener('click', () => {
     window.location.href = 'https://bralexander1.github.io/wormhole/homepage.html'; // Replace with your actual homepage URL
 });
+
 // Toggle audio functionality
 const audio = document.getElementById('background-audio');
 const toggleButton = document.getElementById('audio-toggle');
@@ -118,9 +119,9 @@ const toggleButton = document.getElementById('audio-toggle');
 toggleButton.addEventListener('click', function() {
     if (audio.paused) {
         audio.play();
-        toggleButton.textContent = 'Turn Audio Off';
+        audioIcon.src = 'wormhole/speaker_on.png'
     } else {
         audio.pause();
-        toggleButton.textContent = 'Turn Audio On';
+        audioIcon.src = 'wormhole/speaker_off.png';
     }
 });
