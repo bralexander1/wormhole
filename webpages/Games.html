@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="games.css">
+    </head>
+    <body>
+    <div class="sketchfab-embed-wrapper"> <iframe title="3D Mashup" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/e949db1f691942f1a4e10e5ca31f270e/embed"> </iframe> <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a href="https://sketchfab.com/3d-models/3d-mashup-e949db1f691942f1a4e10e5ca31f270e?utm_medium=embed&utm_campaign=share-popup&utm_content=e949db1f691942f1a4e10e5ca31f270e" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> 3D Mashup </a> by <a href="https://sketchfab.com/benjryanalex?utm_medium=embed&utm_campaign=share-popup&utm_content=e949db1f691942f1a4e10e5ca31f270e" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;"> benjryanalex </a> on <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=e949db1f691942f1a4e10e5ca31f270e" target="_blank" rel="nofollow" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a></p></div>
+    <script src="three.min.js"></script>
+    <script>
+        let scene;
+
+        function init() {
+            scene  = new THREE.Scene();
+            scene.background = new THREE.color(0xdddddd);
+
+            camera = new THREE.PersepectiveCamera(40,window.innerWidth/window.innerHeight,1,50000);
+
+            hlight = new THREE.AmbientLight (0x404040,100);
+            scene.add(hlight);
+
+            renderer = new THREE.WebGLRenderer({antialias:true});
+            renderer.setSize(window.innerWidth,window.innerHeight
+            document.body.appendChild(renderer.domElement);
+            )
+        }
+    </script>
+    </body>
+</html>

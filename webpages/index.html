@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wormhole | Arts and Entertainment</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+
+<body>
+<div class="container">
+    <div class="sitename"</div>
+        <h1>Wormhole</h1>
+        <h4>Arts and Entertainment</h4>
+    </div>
+</div>
+
+<nav class="menu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Photography.html">Photography</a></li>
+        <li><a href="Illustration.html">Illustration</a></li>
+        <li><a href="Games.html">Games</a></li>
+        <li><a href="Animation.html">Animation</a></li>
+        <li><a href="Design.html">Design</a></li>
+        <li><a href="Cinematography.html">Cinematography</a></li>
+        <li><a href="https://glamcamp.bandcamp.com/track/dogs-aint-got-rules"target="_blank">Music</a></li>
+        <li><a href="https://monkeywithahammer.blogspot.com/"target="_blank">BLOG</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="/Users/ben/Desktop/VSCode/wormhole/images/koji_at_the_beach.jpg" alt="Koji at the Beach"></div>
+            <div class="swiper-slide"><img src="/Users/ben/Desktop/VSCode/wormhole/images/ireicho_booksigning.jpg" alt="Ireicho Booksigning"></div>
+            <div class="swiper-slide"><img src="/Users/ben/Desktop/VSCode/wormhole/images/jake_boat.jpg" alt="Jake's Boat"></div>
+            <div class="swiper-slide"><img src="/Users/ben/Desktop/VSCode/wormhole/images/ojai_skate_park.jpg" alt="Ojai Skate Park"></div>
+            <div class="swiper-slide"><img src="/Users/ben/Desktop/VSCode/wormhole/images/yellow_bug.jpg" alt="Yellow VW Bug"></div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+
+<div class="bio">
+    <div class="bio-text">
+        <div class="header1">
+            <h1>...and the horse you rode in on...</h1>
+        </div>
+        <div class="left-text">
+            <p>Get lost in the unsupported and decomposing mind of a giant, unrelenting force of nature known as the cosmic expanse of stinky butts.</p>
+        </div>
+    </div>
+    <div class="image">
+        <h2>MEET BASH</h2>
+        <img src="/Users/ben/Desktop/VSCode/wormhole/images/profile.jpg">
+    </div>
+    <div>
+        <h2>ABOUT BASH</h2>
+        <p>Born in 1994 in Annapolis, Maryland in the morning of a cold and frosty February day, born 
+        and raised in the marshes and swamp gas of the Chesapeake Bay, BASH was born to a Virgina 
+        man and a Severna Park mama. In 1995 they claimed their stake on Kent Island, a small peice 
+        of land on Maryland's Eastern Shore, connected to Central Maryland by the Chesapeake Bay Bridge.</p>
+        <p> BASH has a wide range of passions and interests than span many hobbies, activities, and subjects 
+        from music, art and photography to Star Wars Odd World and the Lord of the Rings</p>
+        <p>What's up my hominids?</p>
+    </div>
+</div>
+<div class="container" style="color: white;">
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>CONTACT</h3>
+        <p>If you would like you get in contact with BASH or the rest of Wormhole Art and Entertainment, shoot us a quick message and we'll get back to you as quick as we can.</p>
+</div>
+<div class="container">
+    <form action="action_page.php">
+  
+      <label for="fname">Name</label>
+      <input type="text" id="fname" name="Your name" placeholder="Your name..">
+  
+      <label for="email">email</label>
+      <input type="text" id="email" name="email" placeholder="Your email..">
+  
+      <label for="Message">Message</label>
+      <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <input type="submit" value="Submit">
+  
+    </form>
+  </div> 
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false
+        },
+  loop: true,
+
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+</script>
+</body>
+</html>

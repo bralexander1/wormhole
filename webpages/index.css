@@ -1,0 +1,122 @@
+html,body {
+    background-color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+.sitename {
+    text-align: center;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFF;
+}
+
+/* Navigation Bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 2rem;
+    padding: 0;
+    overflow: hidden;
+    background-color: #7f7f7f;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: flex;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+
+  .active {
+    background-color: #04AA6D;
+  }
+
+/*text for image slider...*/
+
+  .swiper {
+    width: 60%;
+    height: fit-content;
+    margin: 0 auto;
+  }
+  .swiper-slide img {
+    width:100%;
+  }
+  .swiper .swiper-button-next, .swiper-button-prev {
+    color: #fff;
+  }
+.swiper .swiper-pagination-bullet-active {
+    background: #fff;
+}
+.bio {
+    border-style: groove;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+   flex-wrap: wrap;
+   color: white;
+   padding: 2rem;
+   align-items: flex-start;
+   gap: 2rem;
+  }
+
+  .bio-text {
+    max-width: 60%;
+  }
+  .header1, .left-text {
+    font-size: 1.2rem;
+    font-family: 'MS LineDraw', monospace;
+    flex: 1;
+    min-width: 250px;
+    padding-right: 1rem;
+  }
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    max-width: 35%;
+  }
+  
+
+   /* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ffffff; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #7dc5ff;
+  color: rgb(0, 0, 0);
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #ffffff;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  padding: 20px;
+} 
